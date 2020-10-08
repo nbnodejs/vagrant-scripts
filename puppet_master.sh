@@ -19,3 +19,6 @@ do
 done
 
 mv /vagrant/puppets.conf /etc/puppet/puppet.conf
+
+systemctl enable puppetserver
+systemctl start puppetserver
