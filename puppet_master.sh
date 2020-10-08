@@ -20,7 +20,7 @@ done
 
 setenforce 0
 
-mv /vagrant/puppets.conf /etc/puppet/puppet.conf
+mv /vagrant/puppets.conf.master /etc/puppet/puppet.conf
 mv /vagrant/hosts.master /etc/hosts
 
 systemctl enable puppetserver
