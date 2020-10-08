@@ -3,7 +3,7 @@
 #Install puppet server package
 yum install -y puppetserver
 
-PENVS="production"
+PENVS="production test"
 
 for NEWENV in ${PENVS}
 do
@@ -21,6 +21,7 @@ done
 setenforce 0
 
 mv /vagrant/puppets.conf /etc/puppet/puppet.conf
+mv /vagrant/hosts.master /etc/hosts
 
 systemctl enable puppetserver
 systemctl restart puppetserver
