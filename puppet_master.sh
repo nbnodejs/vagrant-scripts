@@ -18,7 +18,10 @@ do
     echo "environment_timeout=5s" >> ${ENVCONF}
 done
 
+setenforce 0
+
 mv /vagrant/puppets.conf /etc/puppet/puppet.conf
 
 systemctl enable puppetserver
-systemctl start puppetserver
+systemctl restart puppetserver
+
